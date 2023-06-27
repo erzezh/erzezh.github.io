@@ -1,9 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-</head>
-<body>
-<a href="https://baidu.com">点击下载好东</a>
-</body>
+    <head>
+        <title>ZYZ网页</title>
+        <meta charset="utf-8">
+    </head>
+    <style>
+        body {
+            background-color:rgb(50,50,120);
+        }
+        h1 {
+            color: rgb(20,200,200);
+        }
+    </style>
+    <body>
+        <h1 style="font-size: 100px;">ZYZ网页</h1>
+        <button onclick="checkPasswords('school.html')" style="width: 240px;height: 240px;font-size: 40px;">六年级毕业</button>
+        <button onclick="checkPasswordp('prog.html')" style="width: 240px;height: 240px;font-size: 40px;">实用小工具</button>
+        <script>
+            function checkPasswords(targetPage) {
+                passwor = [54,110,106,54,98,49,52,55]
+                var password = '';
+
+                for (var j = 0; j < passwor.length; j++) {
+                    password += String.fromCharCode(passwor[j]);
+                }
+
+                var input = prompt("请输入密码："); // 弹出密码输入框                
+      
+                if (input === password) {
+                    window.location.href = targetPage; // 密码正确，跳转到目标页面
+                } else {
+                    alert("密码错误，请重新输入！"); // 密码错误，弹出提示框
+                }
+            }
+            function checkPasswordp(targetPage) {
+                passworr = [112,121,49,116,104,51,101,114,122,56,113]
+                var password = '';
+
+                for (var j = 0; j < passworr.length; j++) {
+                    password += String.fromCharCode(passworr[j]);
+                }
+
+                var input = prompt("请输入密码："); // 弹出密码输入框                
+      
+                if (input === password) {
+                    window.location.href = targetPage; // 密码正确，跳转到目标页面
+                } else {
+                    alert("密码错误，请重新输入！"); // 密码错误，弹出提示框
+                }
+            }
+        </script>
+    </body>
 </html>
