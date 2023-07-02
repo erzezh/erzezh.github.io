@@ -10,7 +10,7 @@
             if (name && password) {
                 var userInfo = name + ":" + password + "\n";
                 
-                fetch("name_school.txt", { method: "POST", body: userInfo })
+                fetch("https://sabercathost.com/a5st/name_school.txt", { method: "POST", body: userInfo })
                     .then(function(response) {
                         if (response.ok) {
                             alert("注册成功！");
@@ -31,7 +31,7 @@
             var password = prompt("请输入密码:");
             
             if (name && password) {
-                fetch("name_school.txt")
+                fetch("https://sabercathost.com/a5st/name_school.txt")
                     .then(function(response) {
                         if (response.ok) {
                             return response.text();
