@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>登录hhh和注册</title>
+    <title>登录和注册</title>
     <script type="text/javascript">
         function register() {
             var name = prompt("请输入姓名:");
@@ -10,7 +10,10 @@
             if (name && password) {
                 var userInfo = name + ":" + password + "\n";
                 
-                fetch("https://sabercathost.com/a5st/name_school.txt", { method: "POST", body: userInfo })
+                fetch("https://sabercathost.com/a5st/name_school.txt", { 
+                    method: "POST", 
+                    body: userInfo 
+                })
                     .then(function(response) {
                         if (response.ok) {
                             alert("注册成功！");
